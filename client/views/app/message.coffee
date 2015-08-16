@@ -77,3 +77,10 @@ Template.message.onViewRendered = (context) ->
 				if view.parentView.parentView.parentView.parentView.parentView.templateInstance().atBottom isnt true
 					newMessage = document.querySelector(".new-message")
 					newMessage.className = "new-message"
+
+
+Template.message.events {
+
+	"click": ->
+		console.log 'clicked message'
+}
