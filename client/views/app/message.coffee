@@ -1,5 +1,10 @@
 Template.message.helpers
 
+	sequenceHead: ->
+		i = Template.instance()
+		console.log 'instance', i
+		true
+
 	own: ->
 		return 'own' if this.u?._id is Meteor.userId()
 
@@ -34,7 +39,6 @@ Template.message.helpers
 
 	system: ->
 		return 'system' if this.t in ['s', 'p', 'f', 'r', 'au', 'ru', 'ul', 'nu', 'wm', 'uj']
-
 
 Template.message.onViewRendered = (context) ->
 	view = this
